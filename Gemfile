@@ -28,6 +28,11 @@ gem 'image_processing', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'unicorn'
+
+gem 'aws-sdk-s3', require: false
+gem 'dotenv-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -42,6 +47,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem "capistrano", "~> 3.10", require: false
   gem "capistrano-rails", "~> 1.6", require: false
+  gem 'capistrano-safe-deploy-to'
+  gem 'capistrano-rbenv', '~> 2.2'
+  gem 'capistrano3-unicorn'
 end
 
 group :test do
