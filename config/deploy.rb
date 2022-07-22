@@ -1,9 +1,12 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.0"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "cdp_web_web_aws_deploy_task"
+set :repo_url, "https://github.com/Rattuti/AWS_test_deploy.git"
+set :bundle_without, %w{test}.join(':')
 
+set :rbenv_version, '3.0.1'
+append :linked_files, 'config/secrets.yml'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
